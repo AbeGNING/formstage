@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class NomdelaMigrationStage extends Migration
+class CreateCommandesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class NomdelaMigrationStage extends Migration
      */
     public function up()
     {
-        Schema::create('Stage', function (Blueprint $table) {
-            $table->id();
-            $table->uuid()->unique();
-            $table->string('designation', 255);
-            $table->text('description')->nullable();
+        Schema::create('commandes', function (Blueprint $table) {
+            $table->uuid('id');
+            $table->string('repas');
+            $table->text('description');
+            $table->string('image');
+            $table->integer('prix');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class NomdelaMigrationStage extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Stage');
+        Schema::dropIfExists('commandes');
     }
 }
