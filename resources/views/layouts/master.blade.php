@@ -34,8 +34,8 @@
                         Commandes
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('accueil') }}">Nouvelle commandes</a>
-                        <a class="dropdown-item" href="{{ route('accueil') }}">Commandes effectuées</a>
+                        <a class="dropdown-item" href="{{ route('commande.create') }}">Nouvelle commandes</a>
+                        <a class="dropdown-item" href="{{ route('commande.index') }}">Commandes effectuées</a>
                     </div>
                 </li>
                
